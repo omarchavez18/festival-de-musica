@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/omarchavez18/festival-de-musica/issues"
   },
-  "homepage": "https://github.com/omarchavez18/festival-de-musica#readme"
+  "homepage": "https://github.com/omarchavez18/festival-de-musica#readme",
+  "devDependencies": {
+    "sass": "^1.47.0"
+  }
 }
