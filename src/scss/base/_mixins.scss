@@ -1,0 +1,44 @@
+// para crear un mixin inteligente con parametros
+/* se manda llamar las variables con el "@use" y despues del heading le abrimos un parentesis
+ como si fueramos a declarar un parametro se escribe $color haciendo referencia a que seria la que puede cambiar
+ asi como en la variable color: tambien llevara $color */
+
+@use "variables" as v;
+
+// el blue despues de los dos puntos de $color, indica que si no se le establece un color tome el blue.
+// @mixin heading($color: blue, $border-radius: false) {
+//   text-transform: uppercase;
+//   font-size: 2.4rem;
+//   color: $color;
+//   letter-spacing: 1px;
+//   background-color: black;
+
+//   @if $border-radius {
+//     border-radius: 2rem;
+//   }
+// }
+
+//crear mixins para media queries.
+@mixin telefono {
+  @media (min-width: v.$telefono) {
+    @content; // lo escrito en la seccion del @ include m.telefono se agrega al @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin desktopXL {
+  @media (min-width: v.$desktopXL) {
+    @content;
+  }
+}

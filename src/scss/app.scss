@@ -1,7 +1,4 @@
 //las variables en sass inician con un $ .
-
-$rojo: rgb(23, 27, 46);
-
-body {
-  background-color: $rojo;
-}
+// con el "use" esta llamando el contenido de la carpeta "base"
+@use "base";
+@use "layout";

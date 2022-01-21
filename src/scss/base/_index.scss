@@ -1,0 +1,8 @@
+// el "@forward" esta permitiendo ser llamado por el @use a el archivo de app.scss
+/* se tienen que declarar con el forward el nombre del archivo que se encuentra dentro
+ de la carpeta siempre en el index de esa carpeta. */
+
+@forward "variables";
+@forward "mixins";
+@forward "normalize";
+@forward "globales";

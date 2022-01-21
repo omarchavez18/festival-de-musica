@@ -1,0 +1,46 @@
+/* siempre llama los mixins como "m" ya que asi lo declaraste para el snippet de mq.
+hay un snippet para importar los mixnis que seria "imm"*/
+@use "base/mixins" as m;
+
+/* siempre llama las variables como "v" ya que asi lo declaraste para el snippet.
+hay un snippet para importar las variables que seria "imv"*/
+@use "base/variables" as v;
+
+.header {
+  background-color: v.$verde;
+  h1 {
+    color: v.$blanco;
+    text-align: center;
+    @include m.tablet {
+      margin: 0;
+    }
+  }
+  .contenido-header {
+    @include m.tablet {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      align-items: center;
+    }
+  }
+}
+.navegacion-principal {
+  @include m.tablet {
+    display: flex;
+    gap: 2rem;
+  }
+  a {
+    display: block; // esto coloca los enlaces de arriba hacia abajo.
+    text-align: center;
+    color: v.$blanco;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    @include m.tablet {
+      margin: 0;
+    }
+
+    &:hover {
+      color: v.$amarillo;
+    }
+  }
+}

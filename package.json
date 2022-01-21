@@ -22,6 +22,8 @@
   "homepage": "https://github.com/omarchavez18/festival-de-musica#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.47.0"
   }
 }
