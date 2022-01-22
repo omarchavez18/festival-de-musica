@@ -16,6 +16,7 @@
 }
 
 .escenarios-contenedor {
+  padding-bottom: 2rem;
   @include m.tablet {
     @include m.grid(2, 5rem);
   }
