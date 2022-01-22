@@ -11,7 +11,7 @@
   }
   .dia {
     text-transform: uppercase;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
   }
 }
 
@@ -66,7 +66,7 @@
   // nth-child selecciona el hijo en fila, (odd) selecciona solo los impares
   //darken es propio de scss sirve para hacer mas oscuro un color y despues de la coma va el porcentaje de oscuro
   li:nth-child(odd) {
-    background-color: darken(v.$amarillo, 10%);
+    background-color: darken(v.$amarillo, 15%);
   }
 }
 
