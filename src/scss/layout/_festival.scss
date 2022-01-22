@@ -1,0 +1,43 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.sobre-festival {
+  //seccion de tamaño menor de la tablet.
+  padding: 5rem 0;
+
+  //seccion de media query de una tablet a mayor.
+  @include m.tablet {
+    @include m.grid(2, 5rem);
+  }
+
+  // lo de abajo declara en la scale el tamaño original de la imagen en 1 para poder crecerla en el hover
+  .imagen {
+    transform: scale(1);
+    //aqui declaras el tiempo de la trnasition y como quieres que se acerque y aleje cuando pasas el mouse
+
+    transition: all 800ms ease-in-out;
+  }
+  .imagen:hover {
+    // 1.06 declara que se acercara .06 veces el tmaño original
+    transform: scale(1.06);
+  }
+
+  //
+}
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @include m.tablet {
+    margin-top: 5rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .fecha {
+    color: v.$rosa;
+    font-weight: 700;
+  }
+}

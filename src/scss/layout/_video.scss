@@ -47,6 +47,10 @@
     color: v.$blanco;
     font-weight: 700;
     font-size: 2.4rem;
-    margin: 0;
+    margin: 2rem 0;
+
+    @include m.tablet {
+      margin-top: 2rem;
+    }
   }
 }

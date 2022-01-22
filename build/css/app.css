@@ -361,6 +361,7 @@ body {
 p {
   font-size: 2rem;
   color: #000;
+  line-height: 1.5;
 }
 
 .contenedor {
@@ -387,6 +388,13 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* se tienen que declarar con el forward el nombre del archivo que se encuentra dentro
@@ -481,5 +489,121 @@ hay un snippet para importar las variables que seria "imv"*/
   color: #fff;
   font-weight: 700;
   font-size: 2.4rem;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .contenido-video p {
+    margin-top: 2rem;
+  }
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.sobre-festival .imagen {
+  transform: scale(1);
+  transition: all 800ms ease-in-out;
+}
+.sobre-festival .imagen:hover {
+  transform: scale(1.06);
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .contenido-festival {
+    margin-top: 5rem;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #f53756;
+  font-weight: 700;
+}
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 0;
+}
+.lineup h3,
+.lineup p {
+  text-align: center;
+  color: #fff;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.escenarios-contenedor p {
+  color: #000;
+}
+.escenarios-contenedor .escenario {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+.escenarios-contenedor .escenario p:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .nombre-escenario:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-escenario:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  padding: 0;
   margin: 0;
+  list-style: none;
+}
+.calendario li {
+  padding-top: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-amarillo {
+  background-color: #fef46d;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fef03a;
+}
+
+.bg-verde {
+  background-color: #4cb8b3;
+}
+.bg-verde li:nth-child(even) {
+  background-color: #3b9691;
 }
