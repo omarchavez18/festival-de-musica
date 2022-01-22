@@ -70,16 +70,22 @@ function versionAvif(done) {
   done();
 }
 
+function javascript(done) {
+  src("src/js/**/*.js").pipe(dest("build/js"));
+  done();
+}
+
 function dev(done) {
   /*este es el archivo que va a vigilar, identifica el archivo y luego la tarea que manda llamar,
    cuando se realice un cambio en el archivo .scss se ejecutara al momento*/
   // la parte del "**/*" se encarga de revisar todas las carpetas dentro del scss para ejecutar los cambios.
   watch("src/scss/**/*.scss", css);
-
+  watch("src/js/**/*.js", javascript);
   done();
 }
 exports.css = css;
+exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
