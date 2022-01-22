@@ -548,6 +548,9 @@ hay un snippet para importar las variables que seria "imv"*/
   margin-bottom: 5rem;
 }
 
+.escenarios-contenedor {
+  padding-bottom: 2rem;
+}
 @media (min-width: 768px) {
   .escenarios-contenedor {
     display: grid;
