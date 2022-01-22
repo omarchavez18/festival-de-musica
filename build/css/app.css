@@ -545,7 +545,7 @@ hay un snippet para importar las variables que seria "imv"*/
 }
 .lineup .dia {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 .escenarios-contenedor {
@@ -601,7 +601,7 @@ hay un snippet para importar las variables que seria "imv"*/
   background-color: #fef46d;
 }
 .bg-amarillo li:nth-child(odd) {
-  background-color: #fef03a;
+  background-color: #fdee21;
 }
 
 .bg-verde {
