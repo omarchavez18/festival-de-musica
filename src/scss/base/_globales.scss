@@ -14,6 +14,10 @@ html {
 body {
   font-family: v.$fuente_principal; // aqui se llama el nombre que declare en el "use" en este caso "v"
   font-size: 1.6rem;
+
+  &.fijar-body {
+    overflow: hidden; // impide que se le pueda dar scroll una vez seleccionada la imagen.
+  }
 }
 
 p {
