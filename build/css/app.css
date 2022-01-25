@@ -604,14 +604,14 @@ hay un snippet para importar las variables que seria "imv"*/
   background-color: #fef46d;
 }
 .bg-amarillo li:nth-child(odd) {
-  background-color: #fdee21;
+  background-color: #dbcc01;
 }
 
 .bg-verde {
   background-color: #4cb8b3;
 }
 .bg-verde li:nth-child(even) {
-  background-color: #3b9691;
+  background-color: #348380;
 }
 
 .galeria {
@@ -651,7 +651,10 @@ hay un snippet para importar las variables que seria "imv"*/
   }
 }
 
+/* el ">" despues de galeria-imagenes nos indica que afecte a las "picture" 
+que se encuentren dentro de galeria-imagenes*/
 .galeria-imagenes > picture {
+  cursor: pointer;
   transform: scale(1);
   transition: all 200ms ease-in-out;
 }
@@ -689,4 +692,70 @@ hay un snippet para importar las variables que seria "imv"*/
 }
 .btn-cerrar:hover {
   cursor: pointer;
+}
+
+.boletos {
+  padding: 5rem 0;
+}
+.boletos h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .boletos .contenedor-boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pase {
+  /* el "&" lo que hace es introducir el dato en la clase "-header y demas que pertenecen 
+  a la parte "pase" como seria "pase-header*/
+  color: #000;
+}
+.pase .nombre-pase {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+}
+.pase-header, .pase-footer {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+.pase-header {
+  background-color: #f53756;
+  cursor: pointer;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.pase-body {
+  background-color: #fff;
+  cursor: pointer;
+}
+.pase-body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.pase-body ul li,
+.pase-body ul :nth-child(even) {
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: #752f97;
+}
+.pase-footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
