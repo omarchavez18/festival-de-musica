@@ -16,6 +16,9 @@
 const { src, dest, watch, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcss = require("gulp-postcss");
 
 //Imagenes
 const cache = require("gulp-cache");
@@ -30,6 +33,7 @@ const {src} = require('gulp') como arriba*/
     //
     .pipe(plumber())
     .pipe(sass()) // segundo paso, compilarlo.
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("build/css")); // tercer paso, almacenarlo.
 
   done();
