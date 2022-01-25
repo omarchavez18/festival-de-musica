@@ -8,6 +8,17 @@ hay un snippet para importar las variables que seria "imv"*/
 
 .header {
   background-color: v.$verde;
+
+  @include m.tablet {
+    &.fijo {
+      left: 0;
+      top: 0;
+      position: fixed;
+      width: 99%;
+      box-shadow: 0.3rem 0.3rem 0.3rem black;
+    }
+  }
+
   h1 {
     color: v.$blanco;
     text-align: center;
