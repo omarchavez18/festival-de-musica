@@ -24,8 +24,10 @@
   @include m.desktop {
     @include m.grid(6, 2rem);
   }
-} // el ">" despues de galeria-iamgens
+} /* el ">" despues de galeria-imagenes nos indica que afecte a las "picture" 
+que se encuentren dentro de galeria-imagenes*/
 .galeria-imagenes > picture {
+  cursor: pointer;
   transform: scale(1);
   transition: all 200ms ease-in-out;
 }
