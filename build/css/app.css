@@ -357,6 +357,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -609,4 +612,81 @@ hay un snippet para importar las variables que seria "imv"*/
 }
 .bg-verde li:nth-child(even) {
   background-color: #3b9691;
+}
+
+.galeria {
+  padding: 5rem 0;
+}
+.galeria h3 {
+  text-align: center;
+}
+
+.galeria-imagenes {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+.galeria-imagenes > picture {
+  transform: scale(1);
+  transition: all 200ms ease-in-out;
+}
+
+.galeria-imagenes > picture:hover {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay picture {
+  display: block;
+  max-width: 80rem;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.btn-cerrar:hover {
+  cursor: pointer;
 }
