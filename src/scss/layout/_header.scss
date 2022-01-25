@@ -7,6 +7,9 @@ hay un snippet para importar las variables que seria "imv"*/
 @use "base/variables" as v;
 
 .header {
+  .a-header {
+    color: v.$blanco;
+  }
   background-color: v.$verde;
 
   @include m.tablet {
