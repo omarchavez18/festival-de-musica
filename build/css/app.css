@@ -759,3 +759,13 @@ que se encuentren dentro de galeria-imagenes*/
   font-size: 2.4rem;
   font-weight: 700;
 }
+
+.site-footer {
+  background-color: #f53756;
+}
+.site-footer p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
