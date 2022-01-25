@@ -1,0 +1,70 @@
+@use "base/variables" as v; // para llamarlos es con "imv"
+@use "base/mixins" as m; // para llamarlos es con "imm"
+
+.boletos {
+  padding: 5rem 0;
+  h3 {
+    text-align: center;
+    color: v.$blanco;
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-boletos {
+    @include m.tablet {
+      @include m.grid(2, 5rem);
+    }
+  }
+}
+
+.pase {
+  /* el "&" lo que hace es introducir el dato en la clase "-header y demas que pertenecen 
+  a la parte "pase" como seria "pase-header*/
+  color: v.$negro;
+
+  .nombre-pase {
+    text-align: center;
+    font-size: 2.5rem;
+    color: v.$blanco;
+  }
+
+  &-header,
+  &-footer {
+    cursor: pointer;
+    padding: 0.5rem;
+    p {
+      text-align: center;
+      color: v.$blanco;
+      margin: 0;
+    }
+  }
+
+  &-header {
+    background-color: v.$rosa;
+    p {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    }
+    cursor: pointer;
+  }
+  &-body {
+    background-color: v.$blanco;
+    cursor: pointer;
+
+    ul {
+      @include m.resetear-lista;
+      li,
+      :nth-child(even) {
+        padding: 1rem;
+        background-color: v.$blanco;
+        border-bottom: 1px solid #e1e1e1;
+      }
+    }
+  }
+  &-footer {
+    background-color: v.$morado;
+    p {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+  }
+}
